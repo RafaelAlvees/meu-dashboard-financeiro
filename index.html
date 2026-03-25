@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Dashboard Financeiro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <main class="container">
+      <section class="resume">
+        <div class="card">
+            Entradas
+            <span id="display-incomes" class="incomes">R$ 0,00</span>
+        </div>
+        <div class="card">
+            Saídas
+            <span id="display-expenses" class="expenses">R$ 0,00</span>
+        </div>
+        <div class="card balance">
+            Saldo Total
+            <span id="display-total">R$ 0,00</span>
+        </div>
+      </section>
+
+      <section class="form-container">
+        <input type="text" id="desc" placeholder="Ex: Salário">
+        <input type="number" id="amount" placeholder="Ex: 1000">
+        <select id="type">
+          <option value="income">Entrada</option>
+          <option value="expense">Saída</option>
+        </select>
+        <button id="btn-add">Adicionar</button>
+      </section>
+
+      <div class="table-container">
+        <table id="transaction-table">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Tipo</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
